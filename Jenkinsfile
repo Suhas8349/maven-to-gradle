@@ -9,13 +9,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/Karthik-hr18/MyMavenToGradleApp.git'
+                git branch: 'main', url: 'https://github.com/Suhas8349/maven-to-gradle.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh './gradlew clean build'   // ✅ use wrapper (more reliable)
+                sh './gradlew clean build'
             }
         }
 
